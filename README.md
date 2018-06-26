@@ -53,8 +53,9 @@ checkIsUp().then(console.log).catch(console.error)
 console.log(proxies)
 // [
 //     'https://pirateproxy.cam',
-//     'https://piratebay2.org/',
-//     'https://thehiddenbay.com'
+//     'https://piratebay2.org',
+//     'https://thehiddenbay.com',
+//     ...
 // ] Still need to add a couple more
 
 ```

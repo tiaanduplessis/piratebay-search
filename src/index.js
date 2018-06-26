@@ -3,8 +3,9 @@ const nodeFetch = require('node-fetch')
 
 const proxies = [
   'https://pirateproxy.cam',
-  'https://piratebay2.org/',
-  'https://thehiddenbay.com'
+  'https://piratebay2.org',
+  'https://thehiddenbay.com',
+  'https://thepiratebay.wtf'
 ]
 
 const orderingMap = {
