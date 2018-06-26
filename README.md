@@ -4,7 +4,7 @@
 [![package downloads](https://img.shields.io/npm/dm/piratebay-search.svg?style=flat-square)](https://npmjs.org/package/piratebay-search)
 [![standard-readme compliant](https://img.shields.io/badge/readme%20style-standard-brightgreen.svg?style=flat-square)](https://github.com/RichardLitt/standard-readme)
 [![package license](https://img.shields.io/npm/l/piratebay-search.svg?style=flat-square)](https://npmjs.org/package/piratebay-search)
-[![make a pull request](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
+[![make a pull request](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com) [![Greenkeeper badge](https://badges.greenkeeper.io/tiaanduplessis/piratebay-search.svg)](https://greenkeeper.io/)
 
 > Quickly search Piratebay 🏴‍☠️
 
