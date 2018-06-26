@@ -1,14 +1,14 @@
 {
   "name": "piratebay-search",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Quickly search Piratebay 🏴‍☠️",
   "main": "src/index.js",
   "repository": "https://github.com/tiaanduplessis/piratebay-search",
   "author": "Tiaan du Plessis",
   "license": "MIT",
   "scripts": {
-      "test": "jest",
-      "lint": "standard --fix"
+    "test": "jest",
+    "lint": "standard --fix"
   },
   "devDependencies": {
     "babel-preset-env": "^1.7.0",
