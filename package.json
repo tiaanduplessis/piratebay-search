@@ -11,9 +11,9 @@
     "lint": "standard --fix"
   },
   "devDependencies": {
-    "babel-preset-env": "^1.7.0",
-    "jest": "^23.2.0",
-    "standard": "^11.0.1"
+    "babel-preset-env": "1.7.0",
+    "jest": "23.2.0",
+    "standard": "11.0.1"
   },
   "dependencies": {
     "cheerio": "^1.0.0-rc.2",
