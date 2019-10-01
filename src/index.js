@@ -41,6 +41,16 @@ const orderingMap = {
   'leechers': 9
 }
 
+function getProxyList({fetch = nodeFetch} = {}) {
+  return fetch('https://piratebay-proxylist.se/api/v1/proxies')
+    .then(res => res.json())
+    .then(json => json.proxies.map(proxy => `${proxy.secure ? 'https' : 'https'}://${proxy.domain}/`) || [])
+    .then(domains => [...new Set(domains.concat(proxies))])
+    .catch(err => {
+      throw err;
+    })
+}
+
 function isUp (url, {fetch = nodeFetch, wait = 2000} = {}) {
   return new Promise((resolve, reject) => {
     fetch(url, {method: 'HEAD'}).then(res => {
@@ -52,8 +62,9 @@ function isUp (url, {fetch = nodeFetch, wait = 2000} = {}) {
   })
 }
 
-function checkIsUp ({fetch = nodeFetch, wait = 2000, urls = ['https://thepiratebay.org', ...proxies]} = {}) {
-  const proxyPromises = urls.map(url => isUp(url, {fetch, wait}))
+async function checkIsUp ({fetch = nodeFetch, wait = 2000, urls = ['https://thepiratebay.org']} = {}) {
+  const proxyList = await getProxyList();
+  const proxyPromises = urls.concat(proxyList).map(url => isUp(url, {fetch, wait}))
   return Promise.all(proxyPromises)
 }
 
@@ -101,7 +112,7 @@ async function search (q = '', {fetch = nodeFetch, baseURL = 'https://thepirateb
 }
 
 module.exports = {
-  proxies,
+  getProxyList,
   checkIsUp,
   search
 }
