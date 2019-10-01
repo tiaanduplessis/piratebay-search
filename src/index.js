@@ -5,7 +5,31 @@ const proxies = [
   'https://pirateproxy.cam',
   'https://piratebay2.org',
   'https://thehiddenbay.com',
-  'https://thepiratebay.wtf'
+  'https://thepiratebay.wtf',
+  'https://piratebay.kim/',
+  'https://tpb.lc/',
+  'https://thepiratebay.sh/',
+  'https://pirateproxy.tel/',
+  'https://bayproxy.click/',
+  'https://piratebays.red/',
+  'https://thepiratebay.love/',
+  'https://thepiratebay.nz/',
+  'https://piratebays.one/',
+  'https://piratebays.pw/',
+  'https://proxyproxy.org/',
+  'https://piratepirate.be/',
+  'https://proxybay.tel/',
+  'https://tpbproxy.bz/',
+  'https://baypirate.org/',
+  'https://bayproxy.club/',
+  'https://proxybay.nu/',
+  'https://piratebays.click/',
+  'https://pirateproxy.be/',
+  'https://piratebay-proxylist.se/',
+  'https://pirateproxy.wtf/',
+  'https://www.pirateproxy.space/',
+  'https://proxybay.live/',
+  'https://tpbproxy.nl/'
 ]
 
 const orderingMap = {
