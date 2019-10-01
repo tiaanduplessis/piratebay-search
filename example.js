@@ -1,4 +1,4 @@
-const { search, checkIsUp, proxies } = require('piratebay-search')
+const { search, checkIsUp, getProxyList } = require('piratebay-search')
 
 search('Ubuntu', {
   baseURL: 'https://thehiddenbay.com', // default https://thepiratebay.org
@@ -20,9 +20,9 @@ checkIsUp().then(console.log).catch(console.error)
 //   { url: 'https://piratebay2.org/', up: true },
 //   { url: 'https://thehiddenbay.com', up: true } ]
 
-console.log(proxies)
+getProxyList().then(console.log).catch(console.error)
 // [
 //     'https://pirateproxy.cam',
 //     'https://piratebay2.org/',
 //     'https://thehiddenbay.com'
-// ] Still need to add a couple more
+// ]
