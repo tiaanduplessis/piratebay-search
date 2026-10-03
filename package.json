@@ -7,13 +7,13 @@
   "author": "Tiaan du Plessis",
   "license": "MIT",
   "scripts": {
-    "test": "jest",
-    "lint": "standard --fix"
+    "test": "node --test src/__tests__/index.test.js test/lodash-security.test.js",
+    "test:coverage": "node --test --experimental-test-coverage --test-coverage-include=src/index.js --test-coverage-lines=100 --test-coverage-functions=100 src/__tests__/index.test.js test/lodash-security.test.js",
+    "lint": "eslint --no-eslintrc --config .eslintrc.cjs --ext .js,.cjs ."
   },
   "devDependencies": {
-    "babel-preset-env": "1.7.0",
-    "jest": "23.6.0",
-    "standard": "11.0.1"
+    "eslint": "8.57.1",
+    "standard": "17.1.2"
   },
   "dependencies": {
     "cheerio": "^1.0.0-rc.2",
@@ -25,10 +25,5 @@
   "keywords": [
     "piratebay",
     "search"
-  ],
-  "standard": {
-    "env": {
-      "jest": true
-    }
-  }
+  ]
 }
