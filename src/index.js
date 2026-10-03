@@ -41,13 +41,13 @@ const orderingMap = {
   'leechers': 9
 }
 
-function getProxyList({fetch = nodeFetch} = {}) {
+function getProxyList ({fetch = nodeFetch} = {}) {
   return fetch('https://piratebay-proxylist.se/api/v1/proxies')
     .then(res => res.json())
     .then(json => json.proxies.map(proxy => `${proxy.secure ? 'https' : 'https'}://${proxy.domain}/`) || [])
     .then(domains => [...new Set(domains.concat(proxies))])
     .catch(err => {
-      throw err;
+      throw err
     })
 }
 
@@ -56,14 +56,14 @@ function isUp (url, {fetch = nodeFetch, wait = 2000} = {}) {
     fetch(url, {method: 'HEAD'}).then(res => {
       resolve({url, up: res.status >= 200 && res.status < 400})
     })
-    .catch(reject)
+      .catch(reject)
 
     setTimeout(() => resolve({url, up: false}), wait)
   })
 }
 
 async function checkIsUp ({fetch = nodeFetch, wait = 2000, urls = ['https://thepiratebay.org']} = {}) {
-  const proxyList = await getProxyList();
+  const proxyList = await getProxyList()
   const proxyPromises = urls.concat(proxyList).map(url => isUp(url, {fetch, wait}))
   return Promise.all(proxyPromises)
 }
